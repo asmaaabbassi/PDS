@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 24 13:33:14 2021
-
-@author: Thomas MONNIER
-"""
 import random
 class Film:
     def __init__(self, title, duration, min_age, film_dir, ticket_price) -> None:
