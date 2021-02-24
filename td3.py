@@ -31,7 +31,7 @@ class Cinema:
 
     def getSeats(self):
         seats=list()
-        for i in range (1,self.numberofrows):
+        for i in range (1,self.numberofrows+2):
             for j in range (ord('A'), ord('A')+self.numberofcolumns):
                 seats.append(Seat(str(i), chr(j)))
         return seats
