@@ -52,7 +52,7 @@ print(gold_price)
 methodsFile = '../trading_methodologies/trading_methodologies.csv'
 with open(methodsFile, 'w', newline = '') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(["Date", "Trading method", "Allocation no", "Asset", "Weight of asset" "Asset price", "Amount to buy ", "Total spending", "Investment period"])
+        writer.writerow(["Date", "Trading method", "Allocation no", "Asset", "Weight of asset", "Asset price", "Amount to buy ", "Total spending", "Investment period"])
 
 #one-off, no rebalance
 
@@ -95,7 +95,8 @@ for index, row in portfolio_df.iterrows():
         writer = csv.writer(file)
         for x in output:
             writer.writerow(x)
-            
+
+print("one-off, no rebalance done")
 #one-off, rebalance
 
 #DCA, no rebalance
@@ -186,5 +187,6 @@ for index, row in portfolio_df.iterrows():
                 writer = csv.writer(file)
                 for x in output:
                     writer.writerow(x)
-          
+                    
+print("DCA, no rebalance done")       
 #DCA, rebalance
