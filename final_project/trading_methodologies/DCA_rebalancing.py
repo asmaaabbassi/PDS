@@ -33,11 +33,8 @@ def DCA_rebalancing(assets, portfolio_df, amount, inv_date, inv_period):
     usd_price = 1
     
     
-    methodsFile = 'trading_methodologies.csv'
-    with open(methodsFile, 'w', newline = '') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(["Date", "Trading method", "Allocation no", "Asset", "Weight of asset", "Asset price", "Amount", "Total spending", "Investment period"])
-           
+    methodsFile = 'trading_methodologies/trading_methodologies.csv'
+    
     monthly_inv = math.floor(amount/inv_period)
     
     #check data availability for the entire period
