@@ -3,18 +3,13 @@ import csv
 from datetime import datetime
 import numpy as np
 
-methodsFile = 'trading_methodologies/trading_methodologies.csv'
 
-oneoff_df = pd.read_csv('trading_methodologies.csv')
-oneoff_df = oneoff_df[oneoff_df['Trading method'] == 'One-off']
-oneoff_rebal = oneoff_df.copy()
-oneoff_rebal =  oneoff_rebal.replace({"One-off": "Oneoff-rebal"})
-name_assets = ['stocks', 'cbonds', 'sbonds', 'gold', 'cash']
 
 def new_quantities(assets, allocation, date, prec_portfolio):
     stocks_df, cbonds_df, sbonds_df, gold_df, usd_df = assets
 
     amount_to_buy = list(prec_portfolio['Amount to buy'])
+    print(prec_portfolio['Amount to buy'])
     stocks_q = amount_to_buy[0]
     cbonds_q = amount_to_buy[1]
     sbonds_q = amount_to_buy[2]
@@ -47,7 +42,7 @@ def new_quantities(assets, allocation, date, prec_portfolio):
     return new_quantities, prices
 
 
-def rebalancing(assets, allocation_no, allocation, inv_date, nb_months, portfolio, rebal_portfolio):
+def rebalancing(assets, allocation_no, allocation, inv_date, nb_months, portfolio, rebal_portfolio, name_assets):
     rebal_portfolio1 = rebal_portfolio.append(portfolio)
     first_year, first_month = inv_date.year, inv_date.month
     dates = [datetime(first_year, first_month, 15)]
@@ -85,12 +80,20 @@ def oneoff_rebalancing(assets, portfolio_df, amount, inv_date, inv_period):
     
     rebal_portfolio = pd.DataFrame(columns=['Date','Trading method', 'Allocation no', 'Asset', 'Weight of asset', 'Asset price', 'Amount to buy', 'Total spending', 'Investment period'])
     
+    oneoff_df = pd.read_csv('trading_methodologies.csv')
+    oneoff_df = oneoff_df[oneoff_df['Trading method'] == 'One-off']
+    oneoff_rebal = oneoff_df.copy()
+    oneoff_rebal =  oneoff_rebal.replace({"One-off": "Oneoff-rebal"})
+    name_assets = ['stocks', 'cbonds', 'sbonds', 'gold', 'cash']
+
     for iteration, row in portfolio_df.iterrows():
         print('.', flush=True, end='')
         initial_portfolio = oneoff_df.loc[oneoff_df['Allocation no'] == iteration + 1]
-        rebal_portfolio = rebalancing(assets, iteration + 1, list(row[1:]), inv_date, inv_period, initial_portfolio, rebal_portfolio)
+        print(initial_portfolio)
+        rebal_portfolio = rebalancing(assets, iteration + 1, list(row[1:]), inv_date, inv_period, initial_portfolio, rebal_portfolio, name_assets)
     rebal_portfolio = rebal_portfolio.replace({"One-off": "Oneoff-rebal"}) 
     
+    methodsFile = 'trading_methodologies.csv'
     with open(methodsFile, 'a+', newline = '') as file:
         writer = csv.writer(file)
         for x in rebal_portfolio.values.tolist():

@@ -11,6 +11,9 @@ def main():
     stocks_df, cbonds_df, sbonds_df, gold_df, usd_df = replace([15, 1])
     portfolio_df = pd.read_csv('portfolio_allocations/portfolio_allocations.csv')
     
+    with open("trading_methodologies.csv", "w") as my_empty_csv:
+        pass
+    
     assets = [stocks_df, cbonds_df, sbonds_df, gold_df, usd_df]
     
     amount = 100000

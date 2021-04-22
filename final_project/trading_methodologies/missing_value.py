@@ -15,28 +15,31 @@ def previous_neighbor(L, n):
             j = i
     return j
 
-def missing_value(df, month):
+def missing_value(df, month, value):
     df_month = df[df['Date'].str.contains(month)]
 
     days = []
     for index, row in df_month.iterrows():
         days.append(int(row[0][4:6]))
-    
-    if 15 not in days:
-        index_change = previous_neighbor(days, 15) + df_month.index[0]
-        new_value = df_month.iloc[len(df_month)//2]['Date'][0:3] + ' 15' + df_month.iloc[len(df_month)//2]['Date'][6:]
+        
+    if value not in days and value == 1:
+        index_change = df_month.index[-1]
+        new_value = df_month.iloc[previous_neighbor(days, value)]['Date'][0:3] + ' 01' + df_month.iloc[previous_neighbor(days, value)]['Date'][6:]
+        df.at[index_change, 'Date'] = new_value
+        
+    elif value not in days:
+        index_change = previous_neighbor(days, value) + df_month.index[0]
+        new_value = df_month.iloc[previous_neighbor(days, value)]['Date'][0:3] + f' {value}' + df_month.iloc[previous_neighbor(days, value)]['Date'][6:]
         df.at[index_change, 'Date'] = new_value
 
 
-def replace():
+def replace(L):
     files = [stocks_df, cbonds_df, sbonds_df, gold_df, usd_df]
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     
     for file in files:
         for month in months:
-            missing_value(file, month)
-
-
-
-        
-                        
+            for value in L:
+                missing_value(file, month, value)
+    return stocks_df, cbonds_df, sbonds_df, gold_df, usd_df
+            

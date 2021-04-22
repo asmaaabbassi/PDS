@@ -31,7 +31,7 @@ def DCA(assets, portfolio_df, amount, inv_date, inv_period):
     
     usd_price = 1
     
-    methodsFile = 'trading_methodologies/trading_methodologies.csv'
+    methodsFile = 'trading_methodologies.csv'
     
     monthly_inv = math.floor(amount/inv_period)
     

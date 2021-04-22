@@ -29,12 +29,10 @@ def oneoff(assets, portfolio_df, amount, inv_date, inv_period):
         
         usd_price = 1
         
-        methodsFile = 'trading_methodologies/trading_methodologies.csv'
+        methodsFile = 'trading_methodologies.csv'
         with open(methodsFile, 'w', newline = '') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(["Date", "Trading method", "Allocation no", "Asset", "Weight of asset", "Asset price", "Amount to buy", "Total spending", "Investment period"])
-        
-        #one-off, no rebalance
         
         for index, row in portfolio_df.iterrows():
             stocks_rate = row['ST']*amount
@@ -69,7 +67,7 @@ def oneoff(assets, portfolio_df, amount, inv_date, inv_period):
             output.append(tuple([inv_date.strftime('%b %d, %Y'),"One-off", str(index + 1),  "gold", row['GO'], gold_price, gold_amt, gold_spend, inv_period]))
             output.append(tuple([inv_date.strftime('%b %d, %Y'),"One-off", str(index + 1),  "cash", row['CA'], usd_price, usd_amt, usd_spend, inv_period]))
             
-        with open(methodsFile, 'a+', newline = '') as file:
-            writer = csv.writer(file)
-            for x in output:
-                writer.writerow(x)
+            with open(methodsFile, 'a+', newline = '') as file:
+                writer = csv.writer(file)
+                for x in output:
+                    writer.writerow(x)
