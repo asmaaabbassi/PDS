@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime.datetime import datetime
+from datetime import datetime
 
 from oneoff import oneoff
 from oneoff_rebalancing import oneoff_rebalancing
