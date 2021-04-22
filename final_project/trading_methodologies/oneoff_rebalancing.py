@@ -45,11 +45,11 @@ def new_quantities(allocation, date, prec_portofolio):
 
     stocks_index = stocks_df.loc[stocks_df['Date'] == date.strftime('%b %d, %Y')]
     stocks_price = stocks_index.iloc[0]['Price']
-    cbonds_index = cbonds_df.loc[cbonds_df['Date'] == inv_date.strftime('%b %d, %Y')]
+    cbonds_index = cbonds_df.loc[cbonds_df['Date'] == date.strftime('%b %d, %Y')]
     cbonds_price = cbonds_index.iloc[0]['Price']
-    sbonds_index = sbonds_df.loc[sbonds_df['Date'] == inv_date.strftime('%b %d, %Y')]
+    sbonds_index = sbonds_df.loc[sbonds_df['Date'] == date.strftime('%b %d, %Y')]
     sbonds_price = sbonds_index.iloc[0]['Price']
-    gold_index = gold_df.loc[gold_df['Date'] == inv_date.strftime('%b %d, %Y')]
+    gold_index = gold_df.loc[gold_df['Date'] == date.strftime('%b %d, %Y')]
     gold_price = gold_index.iloc[0]['Price']
     usd_price = 1
 
