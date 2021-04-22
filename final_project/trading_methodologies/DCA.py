@@ -32,9 +32,6 @@ def DCA(assets, portfolio_df, amount, inv_date, inv_period):
     usd_price = 1
     
     methodsFile = 'trading_methodologies/trading_methodologies.csv'
-    with open(methodsFile, 'w', newline = '') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(["Date", "Trading method", "Allocation no", "Asset", "Weight of asset", "Asset price", "Amount to buy", "Total spending", "Investment period"])
     
     monthly_inv = math.floor(amount/inv_period)
     
