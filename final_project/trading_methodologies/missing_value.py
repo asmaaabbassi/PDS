@@ -28,15 +28,14 @@ def missing_value(df, month):
         df.at[index_change, 'Date'] = new_value
 
 
-def main():
+def replace():
     files = [stocks_df, cbonds_df, sbonds_df, gold_df, usd_df]
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     
     for file in files:
         for month in months:
             missing_value(file, month)
-            
-print(main())
+
 
 
         
