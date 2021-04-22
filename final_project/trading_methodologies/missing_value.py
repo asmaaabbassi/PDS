@@ -1,10 +1,10 @@
 import pandas as pd
 
-stocks_df = pd.read_csv('data_harvesting/amundi-msci-wrld-ae-c.csv')
-cbonds_df = pd.read_csv('data_harvesting/ishares-global-corporate-bond.csv')
-sbonds_df = pd.read_csv('data_harvesting/db-x-trackers-ii-global-sovereign-5.csv')
-gold_df = pd.read_csv('data_harvesting/spdr-gold-trust.csv')
-usd_df = pd.read_csv('data_harvesting/usdollar.csv')
+stocks_df = pd.read_csv('../data_harvesting/amundi-msci-wrld-ae-c.csv')
+cbonds_df = pd.read_csv('../data_harvesting/ishares-global-corporate-bond.csv')
+sbonds_df = pd.read_csv('../data_harvesting/db-x-trackers-ii-global-sovereign-5.csv')
+gold_df = pd.read_csv('../data_harvesting/spdr-gold-trust.csv')
+usd_df = pd.read_csv('../data_harvesting/usdollar.csv')
 
 def previous_neighbor(L, n):
     m = 0
