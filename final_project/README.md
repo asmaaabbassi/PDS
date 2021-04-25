@@ -8,17 +8,17 @@ Structure of files:
 
 	|--- README.md 
 	|
-	├───data_harvesting---|--data_harvesting.py
+	├───data_harvesting---|--data_harvesting.py				-- main algorithm of part 1
 	|                     |--amundi-msci-wrld-ae-c.csv
 	|                     |--db-x-trackers-ii-global-sovereign-5.csv
 	|                     |--ishares-global-corporate-bond.csv
 	|                     |--spdr-gold-trust.csv
 	|                     |--usdollar.csv
 	|
-	├───portfolio_allocations---|--portfolio_allocations.py
+	├───portfolio_allocations---|--portfolio_allocations.py			-- first task of part 2
 	|                           |--portfolio_allocations.csv
 	|
-	├───portfolio_performance---|--portfolio_metrics.py
+	├───portfolio_performance---|--portfolio_metrics.py			-- third task of part 2
 	|                           |--portfolio_metrics.csv
 	|                           |--asset_volatility.csv
 	|
@@ -27,10 +27,14 @@ Structure of files:
 	|                           |--DCA.py
 	|                           |--DCA_rebalancing.py
 	|                           |--missing_value.py
-	|                           |--main.py
+	|                           |--main.py					-- fourth task of part 2
 	|                           |--trading_methodologiescsv.zip (an archive of the csv file)
 	|
-	|---report.pdf
+	|---report.pdf								-- analysis of part 3
+	|
+	|---exercise_statement.pdf						-- description of the project
+	|
+	|---requirements.txt							-- python packages to be installed
 
 
 Description of files and directories in the project:
