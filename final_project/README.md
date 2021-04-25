@@ -18,7 +18,7 @@ Structure of files:
 	├───portfolio_allocations---|--portfolio_allocations.py			-- first task of part 2
 	|                           |--portfolio_allocations.csv
 	|
-	├───portfolio_performance---|--portfolio_metrics.py			-- third task of part 2
+	├───portfolio_performance---|--portfolio_metrics.py			-- performance of methodologies in part 3
 	|                           |--portfolio_metrics.csv
 	|                           |--asset_volatility.csv
 	|
@@ -27,7 +27,7 @@ Structure of files:
 	|                           |--DCA.py
 	|                           |--DCA_rebalancing.py
 	|                           |--missing_value.py
-	|                           |--main.py					-- fourth task of part 2
+	|                           |--main.py					-- second task of part 2
 	|                           |--trading_methodologiescsv.zip (an archive of the csv file)
 	|
 	|---report.pdf								-- analysis of part 3
@@ -49,10 +49,21 @@ To do this, run
 ## Part 1.:Web Scraping
 	
 <div align="justify"> Before running data_hardvesting/data_harvesting.py, make sure Google Chrome and ChromeDriver is installed on the computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. </div>
+Then, run:
+	
+	python data_harvesting.py
+	
+Each csv file downloaded has been handly renamed. 
 	
 ## Part 2.: Data Generation
 	
-<div align="justify"> There are two main components of data generation in our project. After generating the portfolio data files in the first part, portfolio_allocations/portfolio_allocations.py can be executed, creating all possible allocation sets for creating portfolio alternatives. This .py executable returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, trading_methodologies/main.py needs to be run, that will create all investment alternatives with the use of the allocations and the scraped datasets from part 1. Values for the amount of money to invest, the date of investment and the number of months to invest for can be changed in the main.py file, altering the amount, inv_date and inv_period variables.  After executing trading methodologies, the input file for our data analysis part will be ready in the trading_methodologies folder. </div>
+<div align="justify"> There are two main components of data generation in our project. After generating the portfolio data files in the first part, portfolio_allocations/portfolio_allocations.py can be executed, creating all possible allocation sets for creating portfolio alternatives. This programm returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, trading_methodologies/main.py needs to be run. Thanks to different investment alternatives created with the use of the allocations and the scraped datasets from part 1, we generate a csv file with the values for the amount of money to invest, the date of investment etc... The number of months to invest can be changed in the main.py file where you can alter the amount, inv_date and inv_period variables. After executing the trading methodologies, the input file for our data analysis part will be ready in the trading_methodologies folder. </div>
+
+Therefore, run successively in the right folder:
+
+	python portfolio_allocations.py
+	
+	python main.py
   
 ## Part 3.: Data Analysis
 
@@ -68,6 +79,10 @@ To do this, run
 </div>
 </div>
 
+Thus, run:
+
+	python portfolio_metrics.py
+	
 <div align="justify"> Information has been collected from the file trading_methodologies/trading_methodologies.csv . Metrics generated are located in the file portfolio_performance/portfolio_metrics.csv . </div>
 
 <div class="resume">
@@ -82,4 +97,5 @@ To do this, run
 </div>
 
 ## Endnotes:
+
 <div align="justify"> Developers reserve all rights on the entire project including code and documentation. Executables included in the project might run on different environments and versions of Python packages, but development and testing were only done using versions presented above. </div>
