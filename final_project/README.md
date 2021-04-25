@@ -64,7 +64,26 @@ Therefore, run successively in the right folder:
 	python portfolio_allocations.py
 	
 	python main.py
-  
+
+More details:
+
+<div align="justify">Some of the data retrieved from the website investing.com has missing values. For instance, data for the first day of a month and data for the fifteenth can be missing. Since it is quite annoying (because rebalancing occurs every month on the 15th and because investments occur on the first day of a month), we decided to implement an algorithm, missing_value.py. This algorithm looks at all months for all data and in case that there is no data on the 15th day or the 1st day, then this will happen: data's date for the closest day before the 15th will be replaced by the 15th and data's date for the first day of data of the month will be changed to the 1st. </div>
+
+For example:
+<div class="resume">
+<div class="resume_class">
+    <ul>
+    <h4> </h4>
+	<li>13/07/2020 becomes 15/07/2020 if there is no data for July 15th, 2020</li>
+	<li>03/09/2020 becomes 01/09/2020 if there is no data for September 1st, 2020</li>
+    </ul>
+</div>
+</div>
+
+<div align="justify">You can change anytime the three parameters directly in the main.py code: amount of investment, the date of the beginning of the investment and the number of investing months: </div>
+
+	main(100000, datetime(2020, 7, 1), 3)
+
 ## Part 3.: Data Analysis
 
 <div align="justify"> To analyze the different methods used in the previous part, we calculated different metrics in the file portfolio_performance/portfolio_metrics.py: </div>
