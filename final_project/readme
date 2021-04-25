@@ -1,0 +1,20 @@
+Title: Data Driven Portfolio Management, group project documentation
+Date: 2021 Spring
+Course: Programming for Data Science, UPM Madrid
+Created By: Asmaa Abbassi, Marc de Froidefond, Thomas Monnier, Benedek Király
+
+Description of files and directories:
+
+Instructions for running executables:
+	Part 1.: Web Scraping
+	Before running data_hardvesting/data_harvesting.py, make sure Google Chrome and ChromeDriver is installed on the    computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. 
+	Part 2.: Data Generation
+  There are two main components of data generation in our project. After generating the portfolio data files in the first part, portfolio_allocations/portfolio_allocations.py can be executed, creating all possible allocation sets for creating portfolio alternatives. This .py executable returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, trading_methodologies/main.py needs to be run, 
+	Part 3.: Data Analysis
+
+List of Python modules and files:
+-chromedriver
+-pandas
+
+Notes:
+Developers reserve all rights on the entire project including code and documentation.
