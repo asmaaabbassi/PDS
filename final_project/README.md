@@ -54,6 +54,17 @@ Instructions for running executables:
 
 <div align="justify"> Information has been collected from the file trading_methodologies/trading_methodologies.csv . Metrics generated are located in the file portfolio_performance/portfolio_metrics.csv . </div>
 
+<div class="resume">
+<div class="resume_class">
+    <ul>
+    <h3>List of Python modules and files:</h3>
+	<li>Chromedriver version 90.0.4430.24</li>
+	<li>Pandas version 1.2.4</li>
+	<li>NumPy version 1.20</li>
+    </ul>
+</div>
+</div>
+
 List of Python modules and files:
 	-Chromedriver version 90.0.4430.24
 	-Pandas version 1.2.4
