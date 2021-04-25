@@ -78,7 +78,7 @@ def volatilityofportfolio(allocation, method):
             elif (method == 'One-off' and meth[0] == 'Oneoff-rebal') or (method == 'Oneoff-rebal' and meth[0] == 'DCA') or (method == 'DCA' and meth[0] == 'DCA-rebal'):
                 break
     values = (np.add.reduceat(res, np.arange(0,len(res),5))).tolist()
-    if len(values) < 2:
+    if (len(values) < 2) or (sum(values) == 0):
         return 0
     else:
         return statistics.stdev(values)/sum(values)*len(values)*100
