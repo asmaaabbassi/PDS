@@ -1,7 +1,8 @@
 # Data Driven Portfolio Management, group project documentation
-Date: 2021 Spring
+
+<div align="center"> Date: 2021 Spring
 Course: Programming for Data Science, UPM Madrid
-Created By: Asmaa Abbassi, Marc de Froidefond, Thomas Monnier, Benedek Király
+Created By: Asmaa Abbassi, Marc de Froidefond, Thomas Monnier, Benedek Király </div>
 
 Structure of files:
 
@@ -42,16 +43,16 @@ Instructions for running executables:
 	
 ## Part 2.: Data Generation
 	
-There are two main components of data generation in our project. After generating the portfolio data files in the first part, portfolio_allocations/portfolio_allocations.py can be executed, creating all possible allocation sets for creating portfolio alternatives. This .py executable returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, trading_methodologies/main.py needs to be run, that will create all investment alternatives with the use of the allocations and the scraped datasets from part 1. Values for the amount of money to invest, the date of investment and the number of months to invest for can be changed in the main.py file, altering the amount, inv_date and inv_period variables.  After executing trading methodologies, the input file for our data analysis part will be ready in the trading_methodologies folder.
+<div align="justify"> There are two main components of data generation in our project. After generating the portfolio data files in the first part, portfolio_allocations/portfolio_allocations.py can be executed, creating all possible allocation sets for creating portfolio alternatives. This .py executable returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, trading_methodologies/main.py needs to be run, that will create all investment alternatives with the use of the allocations and the scraped datasets from part 1. Values for the amount of money to invest, the date of investment and the number of months to invest for can be changed in the main.py file, altering the amount, inv_date and inv_period variables.  After executing trading methodologies, the input file for our data analysis part will be ready in the trading_methodologies folder. </div>
   
 ## Part 3.: Data Analysis
 
-To analyze the different methods used in the previous part, we calculated different metrics in the file portfolio_performance/portfolio_metrics.py:
+<div align="justify"> To analyze the different methods used in the previous part, we calculated different metrics in the file portfolio_performance/portfolio_metrics.py: </div>
 		-Cost:the sum of each individual asset cost multiplied by the weight of the asset in the portfolio.
 		-Volatility: the amount of uncertainty or risk related to the size of changes in an asset value
 		-Return: the percentage of the profit or loss in the portfolio. 
 
-Information has been collected from the file trading_methodologies/trading_methodologies.csv . Metrics generated are located in the file portfolio_performance/portfolio_metrics.csv .
+<div align="justify"> Information has been collected from the file trading_methodologies/trading_methodologies.csv . Metrics generated are located in the file portfolio_performance/portfolio_metrics.csv . </div>
 
 List of Python modules and files:
 	-Chromedriver version 90.0.4430.24
@@ -59,4 +60,4 @@ List of Python modules and files:
 	-NumPy version 1.20
 
 ## Endnotes:
-Developers reserve all rights on the entire project including code and documentation. Executables included in the project might run on different environments and versions of Python packages, but development and testing were only done using versions presented above.
+<div align="justify"> Developers reserve all rights on the entire project including code and documentation. Executables included in the project might run on different environments and versions of Python packages, but development and testing were only done using versions presented above. </div>
