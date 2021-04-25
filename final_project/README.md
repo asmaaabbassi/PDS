@@ -48,9 +48,16 @@ Instructions for running executables:
 ## Part 3.: Data Analysis
 
 <div align="justify"> To analyze the different methods used in the previous part, we calculated different metrics in the file portfolio_performance/portfolio_metrics.py: </div>
-		-Cost:the sum of each individual asset cost multiplied by the weight of the asset in the portfolio.
-		-Volatility: the amount of uncertainty or risk related to the size of changes in an asset value
-		-Return: the percentage of the profit or loss in the portfolio. 
+<div class="resume">
+<div class="resume_class">
+    <ul>
+    <h4>List of Python modules and files:</h4>
+	<li>Cost:the sum of each individual asset cost multiplied by the weight of the asset in the portfolio</li>
+	<li>Volatility: the amount of uncertainty or risk related to the size of changes in an asset value</li>
+	<li>Return: the percentage of the profit or loss in the portfolio</li>
+    </ul>
+</div>
+</div>
 
 <div align="justify"> Information has been collected from the file trading_methodologies/trading_methodologies.csv . Metrics generated are located in the file portfolio_performance/portfolio_metrics.csv . </div>
 
