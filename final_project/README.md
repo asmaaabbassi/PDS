@@ -8,26 +8,26 @@
 
 	|--- README.md 
 	|
-	├───data_harvesting---|--data_harvesting.py				-- main algorithm of part 1
+	├───data_harvesting---|--data_harvesting.py				-- retrieves the data from investing.com
 	|                     |--amundi-msci-wrld-ae-c.csv
 	|                     |--db-x-trackers-ii-global-sovereign-5.csv
 	|                     |--ishares-global-corporate-bond.csv
 	|                     |--spdr-gold-trust.csv
 	|                     |--usdollar.csv
 	|
-	├───portfolio_allocations---|--portfolio_allocations.py			-- first task of part 2
+	├───portfolio_allocations---|--portfolio_allocations.py			-- computes the portfolio allocations
 	|                           |--portfolio_allocations.csv
 	|
-	├───portfolio_performance---|--portfolio_metrics.py			-- performance of methodologies in part 3
+	├───portfolio_performance---|--portfolio_metrics.py			-- calculates the metrics for the given allocations and methodologies
 	|                           |--portfolio_metrics.csv
 	|                           |--asset_volatility.csv
 	|
-	└───trading_methodologies---|--oneoff.py
-	|                           |--oneoff_rebalancing.py
-	|                           |--DCA.py
-	|                           |--DCA_rebalancing.py
-	|                           |--missing_value.py
-	|                           |--main.py					-- second task of part 2
+	└───trading_methodologies---|--oneoff.py				-- executes oneoff for all allocations
+	|                           |--oneoff_rebalancing.py			-- executes oneoff rebalancing for all allocations
+	|                           |--DCA.py					-- executes DCA for all allocations
+	|                           |--DCA_rebalancing.py			-- executes DCA rebalancing for all allocations
+	|                           |--missing_value.py				-- replaces the missing values of the data scraped
+	|                           |--main.py					-- computes the four trading methodologies
 	|                           |--trading_methodologiescsv.zip (an archive of the csv file)
 	|
 	|---report.pdf								-- analysis of part 3
