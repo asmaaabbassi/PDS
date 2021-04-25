@@ -20,6 +20,7 @@ There are two main components of data generation in our project. After generatin
 List of Python modules and files:
 	-Chromedriver version 90.0.4430.24
 	-Pandas version 1.2.4
+	-NumPy version 1.20
 
 Endnotes:
 Developers reserve all rights on the entire project including code and documentation. Executables included in the project might run on different environments and versions of Python packages, but development and testing were only done using versions presented above.
