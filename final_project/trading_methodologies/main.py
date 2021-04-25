@@ -7,7 +7,7 @@ from DCA import DCA
 from DCA_rebalancing import DCA_rebalancing
 from missing_value import replace
 
-def main():
+def main(amount inv_date, inv_period):
     stocks_df, cbonds_df, sbonds_df, gold_df, usd_df = replace([15, 1])
     portfolio_df = pd.read_csv('../portfolio_allocations/portfolio_allocations.csv')
     
@@ -16,10 +16,6 @@ def main():
     
     assets = [stocks_df, cbonds_df, sbonds_df, gold_df, usd_df]
     
-    amount = 100000
-    inv_date = datetime(2020, 7, 1)
-    inv_period = 3
-    
     oneoff(assets, portfolio_df, amount, inv_date, inv_period)
     oneoff_rebalancing(assets, portfolio_df, amount, inv_date, inv_period)
     DCA(assets, portfolio_df, amount, inv_date, inv_period)
@@ -27,4 +23,4 @@ def main():
     
     return "CSV file has been created"
 
-main()
+main(100000, datetime(2020, 7, 1), 3)
