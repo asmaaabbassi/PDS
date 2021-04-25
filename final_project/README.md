@@ -4,7 +4,7 @@
 <div align="center"> Course: Programming for Data Science, UPM Madrid </div>
 <div align="center"> Created By: Asmaa Abbassi, Marc de Froidefond, Thomas Monnier, Benedek Király </div>
 
-Structure of files:
+## Structure of files and description of files and directories in the project:
 
 	|--- README.md 
 	|
@@ -37,9 +37,8 @@ Structure of files:
 	|---requirements.txt							-- python packages to be installed
 
 
-Description of files and directories in the project:
 
-Instructions for running executables:
+## Instructions for running executables:
 
 First of all, in order to run the algorithms in the three parts of the project, you have to install all the python packages needed.
 To do this, run 
