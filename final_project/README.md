@@ -51,8 +51,8 @@ Instructions for running executables:
 <div class="resume">
 <div class="resume_class">
     <ul>
-    <h4>List of Python modules and files:</h4>
-	<li>Cost:the sum of each individual asset cost multiplied by the weight of the asset in the portfolio</li>
+    <h4> </h4>
+	<li>Cost: the sum of each individual asset cost multiplied by the weight of the asset in the portfolio</li>
 	<li>Volatility: the amount of uncertainty or risk related to the size of changes in an asset value</li>
 	<li>Return: the percentage of the profit or loss in the portfolio</li>
     </ul>
