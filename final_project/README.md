@@ -34,6 +34,8 @@
 	|
 	|---exercise_statement.pdf						-- description of the project
 	|
+	|--investment_strategies_analysis.pdf					-- aanlysis of the investment strategies 
+	|
 	|---requirements.txt							-- python packages to be installed
 
 
@@ -113,6 +115,8 @@ Thus, run:
     </ul>
 </div>
 </div>
+
+<div align="justify">One can check the answers to some investment strategies questions in the pdf file investment_strategies_analysis.pdf. The file provides answers to the three questions that were asked in the assignment.</div>
 
 ## Endnotes:
 
