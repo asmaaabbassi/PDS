@@ -1,8 +1,8 @@
 # Data Driven Portfolio Management, group project documentation
 
-<div align="center"> Date: 2021 Spring
-Course: Programming for Data Science, UPM Madrid
-Created By: Asmaa Abbassi, Marc de Froidefond, Thomas Monnier, Benedek Király </div>
+<div align="center"> Date: 2021 Spring </div>
+<div align="center"> Course: Programming for Data Science, UPM Madrid </div>
+<div align="center"> Created By: Asmaa Abbassi, Marc de Froidefond, Thomas Monnier, Benedek Király </div>
 
 Structure of files:
 
