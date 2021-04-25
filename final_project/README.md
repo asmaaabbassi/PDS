@@ -37,6 +37,11 @@ Description of files and directories in the project:
 
 Instructions for running executables:
 
+First of all, in order to run the algorithms in the three parts of the project, you have to install all the python packages needed.
+To do this, run 
+
+	pip install -r requirements.txt
+
 ## Part 1.:Web Scraping
 	
 <div align="justify"> Before running data_hardvesting/data_harvesting.py, make sure Google Chrome and ChromeDriver is installed on the computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. </div>
