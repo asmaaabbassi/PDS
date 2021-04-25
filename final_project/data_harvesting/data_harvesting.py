@@ -50,9 +50,10 @@ def data_harvesting(file):
   driver.find_element_by_link_text("Download Data").click()
 
 
-files = ["https://www.investing.com/funds/amundi-msci-wrld-ae-c", "https://www.investing.com/etfs/ishares-global-corporate-bond-$", "https://www.investing.com/etfs/db-x-trackers-ii-global-sovereign-5", "https://www.investing.com/etfs/spdr-gold-trust", "https://www.investing.com/indices/usdollar"]
+def main():
+  files = ["https://www.investing.com/funds/amundi-msci-wrld-ae-c", "https://www.investing.com/etfs/ishares-global-corporate-bond-$", "https://www.investing.com/etfs/db-x-trackers-ii-global-sovereign-5", "https://www.investing.com/etfs/spdr-gold-trust", "https://www.investing.com/indices/usdollar"]
 
-for file in files:
-  data_harvesting(file)
+  for file in files:
+    data_harvesting(file)
 
-
+main()
