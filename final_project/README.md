@@ -30,11 +30,10 @@
 	|                           |--main.py					-- computes the four trading methodologies
 	|                           |--trading_methodologiescsv.zip (an archive of the csv file)
 	|
-	|---report.pdf								-- analysis of part 3
 	|
 	|---exercise_statement.pdf						-- description of the project
 	|
-	|--investment_strategies_analysis.pdf					-- aanlysis of the investment strategies 
+	|--investment_strategies_analysis.pdf					-- analysis of the investment strategies 
 	|
 	|---requirements.txt							-- python packages to be installed
 
