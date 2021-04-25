@@ -38,7 +38,7 @@ Instructions for running executables:
 
 ## Part 1.: Data Harvesting
 	
-Before running data_hardvesting/data_harvesting.py, make sure Google Chrome and ChromeDriver is installed on the computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. 
+<div align="justify"> Before running data_hardvesting/data_harvesting.py, make sure Google Chrome and ChromeDriver is installed on the computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. </div>
 	
 ## Part 2.: Data Generation
 	
