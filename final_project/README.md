@@ -57,18 +57,13 @@ Instructions for running executables:
 <div class="resume">
 <div class="resume_class">
     <ul>
-    <h3>List of Python modules and files:</h3>
+    <h4>List of Python modules and files:</h4>
 	<li>Chromedriver version 90.0.4430.24</li>
 	<li>Pandas version 1.2.4</li>
 	<li>NumPy version 1.20</li>
     </ul>
 </div>
 </div>
-
-List of Python modules and files:
-	-Chromedriver version 90.0.4430.24
-	-Pandas version 1.2.4
-	-NumPy version 1.20
 
 ## Endnotes:
 <div align="justify"> Developers reserve all rights on the entire project including code and documentation. Executables included in the project might run on different environments and versions of Python packages, but development and testing were only done using versions presented above. </div>
