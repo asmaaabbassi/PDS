@@ -47,7 +47,7 @@ To do this, run
 
 ## Part 1.:Web Scraping
 	
-<div align="justify"> Before running data_hardvesting/data_harvesting.py, make sure Google Chrome and ChromeDriver is installed on the computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. </div>
+<div align="justify"> Before running **data_hardvesting/data_harvesting.py**, make sure Google Chrome and ChromeDriver is installed on the computer. Webscraping can be CPU-heavy, so avoid running other processes while executing the file. As the execution finished, all assets portfolio data will be collected in separated .csv files. </div>
 Then, run:
 	
 	python data_harvesting.py
@@ -56,7 +56,7 @@ Each csv file downloaded has been handly renamed.
 	
 ## Part 2.: Data Generation
 	
-<div align="justify"> There are two main components of data generation in our project. After generating the portfolio data files in the first part, portfolio_allocations/portfolio_allocations.py can be executed, creating all possible allocation sets for creating portfolio alternatives. This programm returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, trading_methodologies/main.py needs to be run. Thanks to different investment alternatives created with the use of the allocations and the scraped datasets from part 1, we generate a csv file with the values for the amount of money to invest, the date of investment etc... The number of months to invest can be changed in the main.py file where you can alter the amount, inv_date and inv_period variables. After executing the trading methodologies, the input file for our data analysis part will be ready in the trading_methodologies folder. </div>
+<div align="justify"> There are two main components of data generation in our project. After generating the portfolio data files in the first part, **portfolio_allocations/portfolio_allocations.py** can be executed, creating all possible allocation sets for creating portfolio alternatives. This programm returns the portfolio_allocation.csv file used in the next step, applying trading methods for our dataset. To create the file for the performance analysis, **trading_methodologies/main.py** needs to be run. Thanks to different investment alternatives created with the use of the allocations and the scraped datasets from part 1, we generate a csv file with the values for the amount of money to invest, the date of investment etc... The number of months to invest can be changed in the main.py file where you can alter the amount, inv_date and inv_period variables. After executing the trading methodologies, the input file for our data analysis part will be ready in the trading_methodologies folder. </div>
 
 Therefore, run successively in the right folder:
 
@@ -66,7 +66,7 @@ Therefore, run successively in the right folder:
 
 More details:
 
-<div align="justify">Some of the data retrieved from the website investing.com has missing values. For instance, data for the first day of a month and data for the fifteenth can be missing. Since it is quite annoying (because rebalancing occurs every month on the 15th and because investments occur on the first day of a month), we decided to implement an algorithm, missing_value.py. This algorithm looks at all months for all data and in case that there is no data on the 15th day or the 1st day, then this will happen: data's date for the closest day before the 15th will be replaced by the 15th and data's date for the first day of data of the month will be changed to the 1st. </div>
+<div align="justify">Some of the data retrieved from the website investing.com has missing values. For instance, data for the first day of a month and data for the fifteenth can be missing. Since it is quite annoying (because rebalancing occurs every month on the 15th and because investments occur on the first day of a month), we decided to implement an algorithm, **trading_methodologies/missing_value.py**. This algorithm looks at all months for all data and in case that there is no data on the 15th day or the 1st day, then this will happen: data's date for the closest day before the 15th will be replaced by the 15th and data's date for the first day of data of the month will be changed to the 1st. </div>
 
 For example:
 <div class="resume">
@@ -85,7 +85,7 @@ For example:
 
 ## Part 3.: Data Analysis
 
-<div align="justify"> To analyze the different methods used in the previous part, we calculated different metrics in the file portfolio_performance/portfolio_metrics.py: </div>
+<div align="justify"> To analyze the different methods used in the previous part, we calculated different metrics in the file **portfolio_performance/portfolio_metrics.py**: </div>
 <div class="resume">
 <div class="resume_class">
     <ul>
