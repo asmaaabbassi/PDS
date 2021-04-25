@@ -6,31 +6,31 @@
 
 Structure of files:
 
-|--- README.md 
-|
-├───data_harvesting---|--data_harvesting.py
-|                     |--amundi-msci-wrld-ae-c.csv
-|                     |--db-x-trackers-ii-global-sovereign-5.csv
-|                     |--ishares-global-corporate-bond.csv
-|                     |--spdr-gold-trust.csv
-|                     |--usdollar.csv
-|
-├───portfolio_allocations---|--portfolio_allocations.py
-|                           |--portfolio_allocations.csv
-|
-├───portfolio_performance---|--portfolio_metrics.py
-|                           |--portfolio_metrics.csv
-|                           |--asset_volatility.csv
-|
-└───trading_methodologies---|--oneoff.py
-|                           |--oneoff_rebalancing.py
-|                           |--DCA.py
-|                           |--DCA_rebalancing.py
-|                           |--missing_value.py
-|                           |--main.py
-|                           |--trading_methodologiescsv.zip (an archive of the csv file)
-|
-|---report.pdf
+	|--- README.md 
+	|
+	├───data_harvesting---|--data_harvesting.py
+	|                     |--amundi-msci-wrld-ae-c.csv
+	|                     |--db-x-trackers-ii-global-sovereign-5.csv
+	|                     |--ishares-global-corporate-bond.csv
+	|                     |--spdr-gold-trust.csv
+	|                     |--usdollar.csv
+	|
+	├───portfolio_allocations---|--portfolio_allocations.py
+	|                           |--portfolio_allocations.csv
+	|
+	├───portfolio_performance---|--portfolio_metrics.py
+	|                           |--portfolio_metrics.csv
+	|                           |--asset_volatility.csv
+	|
+	└───trading_methodologies---|--oneoff.py
+	|                           |--oneoff_rebalancing.py
+	|                           |--DCA.py
+	|                           |--DCA_rebalancing.py
+	|                           |--missing_value.py
+	|                           |--main.py
+	|                           |--trading_methodologiescsv.zip (an archive of the csv file)
+	|
+	|---report.pdf
 
 
 Description of files and directories in the project:
